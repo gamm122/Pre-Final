@@ -42,7 +42,7 @@
             $count = 0;
             $finding = $_POST['finding'];
             for ($i = 0; $i < sizeof($items); $i++) {
-                if (strtolower($items[$i]->album->name) == strtolower($finding) or strtolower($items[$i]->artists[0]->name) == strtolower($finding)) {
+                if ((strtolower($items[$i]->album->name) == strtolower($finding)) or (strtolower($items[$i]->artists[0]->name) == strtolower($finding))) {
                     $count++;
                     echo "<div class='card'>";
                     foreach ($items[$i]->album->images as $img) {
